@@ -1,0 +1,8 @@
+{
+  "/api/v1/devtest/randominteger": {
+    "target": "https://devtest.bluedrive.io",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
