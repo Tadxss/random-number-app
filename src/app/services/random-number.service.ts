@@ -1,13 +1,14 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RandomNumberService {
-  private apiUrl = '/api/v1/devtest/randominteger';
-  private token = 'd8efa5fb05336cda75b731ec67e375d28d092ceb';
+  private apiUrl = environment.apiUrl;
+  private token = environment.apiToken;
 
   constructor(private http: HttpClient) { }
 
