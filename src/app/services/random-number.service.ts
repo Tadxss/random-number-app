@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -18,8 +18,15 @@ export class RandomNumberService {
   }
 
   getRandomNumbers(limit: number = 10, offset: number = 0): Observable<any> {
-    return this.http.get(`${this.apiUrl}/?limit=${limit}&offset=${offset}`, {
-      headers: this.getHeaders()
+    let params = new HttpParams()
+      .set('limit', limit.toString())
+      .set('offset', offset.toString());
+      
+    console.log(`Fetching data with limit=${limit}, offset=${offset}`);
+    
+    return this.http.get(`${this.apiUrl}/`, {
+      headers: this.getHeaders(),
+      params: params
     });
   }
 

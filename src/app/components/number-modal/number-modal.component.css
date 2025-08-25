@@ -1,0 +1,12 @@
+/* number-modal.component.css */
+.number {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin: 24px 0;
+  color: #3f51b5;
+}
+
+mat-dialog-content {
+  min-width: 250px;
+}

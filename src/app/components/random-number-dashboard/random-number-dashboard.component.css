@@ -1,0 +1,32 @@
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.action-area, .chart-area, .table-area {
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  height: 300px;
+  margin: 20px 0;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+mat-card {
+  margin-bottom: 20px;
+}
+
+mat-card-content {
+  padding: 16px;
+}
